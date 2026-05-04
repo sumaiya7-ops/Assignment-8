@@ -11,7 +11,11 @@ export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [image, setImage] = useState(""); // এখানে ইউজারের দেওয়া লিঙ্ক থাকবে
+  
+  // ১. আপনার দেওয়া অনলাইন লিঙ্কটি এখানে ডিফল্ট হিসেবে সেট করা হয়েছে
+  const [image, setImage] = useState("https://i.postimg.cc/wTPTDgKs/bunny.jpg");
+         
+  
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
@@ -24,8 +28,8 @@ export default function RegisterPage() {
       email, 
       password, 
       name, 
-      // রিকোয়ারমেন্ট অনুযায়ী ইমেজ লিঙ্ক যাবে, না দিলে আপনার bunny ছবি ডিফল্ট থাকবে
-      image: image || "/bunny.jpg", 
+      // ইউজার লিঙ্ক না দিলে ডিফল্ট এই অনলাইন লিঙ্কটি যাবে
+      image: image || "https://i.postimg.cc/wTPTDgKs/bunny.jpg", 
       callbackURL: "/login" 
     });
 
@@ -46,11 +50,14 @@ export default function RegisterPage() {
     <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-indigo-50/30 px-4 py-8">
       <div className="card w-full max-w-[450px] shadow-xl bg-white p-6 md:p-8 border border-indigo-100 rounded-2xl">
         
-        {/* আপনার কিউট Bunny লোগো */}
+        {/* আপনার কিউট Bunny লোগো (অনলাইন লিঙ্ক সহ) */}
         <div className="flex flex-col items-center mb-4">
           <div className="avatar mb-2">
-            <div className="w-16 rounded-full ring ring-indigo-500 ring-offset-2">
-              <img src="/bunny.jpg" alt="Logo" />
+            <div className="w-16 rounded-full ring ring-indigo-500 ring-offset-base-100 ring-offset-2">
+               <img 
+             src="https://i.postimg.cc/wTPTDgKs/bunny.jpg" 
+             alt="SkillSphere Logo" 
+                />
             </div>
           </div>
           <h1 className="text-xl font-bold text-cyan-900">SkillSphere</h1>
@@ -60,57 +67,27 @@ export default function RegisterPage() {
         <p className="text-center text-gray-500 text-sm mb-6">Join our community today</p>
         
         <form onSubmit={handleRegister} className="space-y-4">
-          {/* Full Name */}
           <div className="form-control w-full">
             <label className="label py-1"><span className="label-text font-bold text-gray-700 text-xs">Full Name</span></label>
-            <input 
-              type="text" 
-              placeholder="Enter your name" 
-              className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" 
-              required 
-              onChange={(e)=>setName(e.target.value)} 
-            />
+            <input type="text" placeholder="Enter your name" className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" required onChange={(e)=>setName(e.target.value)} />
           </div>
 
-          {/* Email Address */}
           <div className="form-control w-full">
             <label className="label py-1"><span className="label-text font-bold text-gray-700 text-xs">Email Address</span></label>
-            <input 
-              type="email" 
-              placeholder="Your Email" 
-              className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" 
-              required 
-              onChange={(e)=>setEmail(e.target.value)} 
-            />
+            <input type="email" placeholder="Your Email" className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" required onChange={(e)=>setEmail(e.target.value)} />
           </div>
 
-          {/* Photo URL (Requirement) */}
+          {/* Photo URL Field */}
           <div className="form-control w-full">
             <label className="label py-1"><span className="label-text font-bold text-gray-700 text-xs">Photo URL (Link)</span></label>
-            <input 
-              type="url" 
-              placeholder="https://example.com" 
-              className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" 
-              onChange={(e)=>setImage(e.target.value)} 
-            />
+            <input type="url" placeholder="https://example.com" className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" onChange={(e)=>setImage(e.target.value)} />
           </div>
 
-          {/* Password */}
           <div className="form-control w-full relative">
             <label className="label py-1"><span className="label-text font-bold text-gray-700 text-xs">Password</span></label>
             <div className="relative">
-              <input 
-                type={showPassword ? "text" : "password"} 
-                placeholder="••••••••" 
-                className="input input-bordered w-full h-10 outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 pr-12 transition-all" 
-                required 
-                onChange={(e)=>setPassword(e.target.value)} 
-              />
-              <button 
-                type="button" 
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-indigo-600" 
-                onClick={() => setShowPassword(!showPassword)}
-              >
+              <input type={showPassword ? "text" : "password"} placeholder="••••••••" className="input input-bordered w-full h-10 outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 pr-12 transition-all" required onChange={(e)=>setPassword(e.target.value)} />
+              <button type="button" className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-indigo-600" onClick={() => setShowPassword(!showPassword)}>
                 {showPassword ? <FaEyeSlash size={18} /> : <FaEye size={18} />}
               </button>
             </div>
@@ -135,6 +112,3 @@ export default function RegisterPage() {
     </div>
   );
 }
-
-
-

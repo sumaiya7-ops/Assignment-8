@@ -42,7 +42,7 @@ const Navbar = () => {
             <img 
              src="https://i.postimg.cc/wTPTDgKs/bunny.jpg" 
              alt="SkillSphere Logo" 
-/>
+             />
 
 
             </div>
