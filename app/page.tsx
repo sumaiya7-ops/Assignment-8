@@ -5,7 +5,9 @@ import coursesData from "@/data/courses.json";
 
 export default function Home() {
   const popularCourses = coursesData.slice(0, 3);
-
+ const trendingCourses = coursesData
+    .sort((a, b) => b.rating - a.rating)
+    .slice(0, 3);
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       
@@ -61,12 +63,9 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {coursesData
-              .filter(course => course.rating >= 4.7)
-              .slice(0, 3)
-              .map((course) => (
-                <CourseCard key={course.id} course={course} />
-              ))}
+        {trendingCourses.map((course) => (
+             <CourseCard key={course.id} course={course} />
+           ))}
           </div>
 
         </div>
