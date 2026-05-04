@@ -64,7 +64,7 @@ AUTH_SECRET=your_auth_secret
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/skillsphere.git
+git clone https://github.com/sumaiya7-ops/Assignment-8.git
 
 
 http://localhost:3000
