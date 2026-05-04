@@ -38,14 +38,12 @@ export default function LoginPage() {
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-indigo-50/30 px-4 py-10">
-      <div className="card w-full max-w-[450px] shadow-xl bg-white p-6 md:p-10 border border-indigo-100 rounded-2xl">
-        
-        {/* --- আপনার কিউট Bunny লোগো এখানে (রেজিস্ট্রেশন পেজের মতো) --- */}
+      <div className="card w-full max-w-[450px] shadow-xl bg-white p-6 md:p-10 border border-indigo-100 rounded-2xl">       
+    
         <div className="flex flex-col items-center mb-4">
           <div className="avatar mb-2">
             <div className="w-16 h-16 rounded-full ring ring-indigo-500 ring-offset-base-100 ring-offset-2 overflow-hidden">
-              {/* আপনার ডাইরেক্ট লিঙ্কটি ব্যবহার করা হয়েছে */}
-              <img  src="https://i.postimg.cc/wTPTDgKs/bunny.jpg"
+               <img  src="https://i.postimg.cc/wTPTDgKs/bunny.jpg"
                 alt="SkillSphere Logo" 
                 className="w-full h-full object-cover"
               />

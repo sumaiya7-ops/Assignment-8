@@ -1,4 +1,3 @@
-// app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -20,19 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={`${inter.className} flex flex-col min-h-screen`}>
-        {/* Toast Notifications */}
-        <Toaster position="top-center" reverseOrder={false} />
-        
-        {/* Persistent Navbar */}
+      <body className={`${inter.className} flex flex-col min-h-screen`}>      
+              
+      <Toaster/>
         <Navbar />
-
-        {/* Dynamic Content (Routes) */}
         <main className="flex-grow">
           {children}
-        </main>
-
-        {/* Persistent Footer */}
+        </main>  
         <Footer />
       </body>
     </html>

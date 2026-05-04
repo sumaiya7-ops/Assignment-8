@@ -9,18 +9,15 @@ const trendingCourses = [...coursesData]
   .sort((a, b) => b.rating - a.rating)
   .slice(0, 3);
   return (
-    <main className="min-h-screen bg-white overflow-hidden">
-      
-      {/* 🎥 1. Hero Section */}
+    <main className="min-h-screen bg-white overflow-hidden">     
+     
       <div className="w-full leading-none">
         <img 
           src="/hero.png" 
           alt="Hero Banner"
           className="w-full h-[300px] md:h-[500px] lg:h-[580px] object-cover block"
         />
-      </div>
-
-      {/* 🔥 2. Popular Courses Section */}
+      </div>    
       <section className="bg-cyan-900 w-full py-16 md:py-24">
         <div className="container mx-auto px-4">
           
@@ -47,9 +44,7 @@ const trendingCourses = [...coursesData]
           </div>
 
         </div>
-      </section>
-
-      {/* 🔥 3. Trending Courses Section */}
+      </section>    
       <section className="py-16 bg-[#0B0F1A]">
         <div className="container mx-auto px-4">
 
@@ -69,9 +64,7 @@ const trendingCourses = [...coursesData]
           </div>
 
         </div>
-      </section>
-
-      {/* 🚀 4. Learning Tips Section */}
+      </section>   
       <section className="py-20 bg-teal-950 text-gray-300">
         <div className="container mx-auto px-4">
 
@@ -132,8 +125,7 @@ const trendingCourses = [...coursesData]
           </div>
         </div>
       </section>
-
-      {/* 🚀 5. Why Section */}
+ 
       <section className="py-24 bg-[#0B0F1A] relative overflow-hidden">
 
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-blue-600/20 blur-[120px] rounded-full"></div>

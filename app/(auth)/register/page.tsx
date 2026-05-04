@@ -10,9 +10,8 @@ import { FcGoogle } from "react-icons/fc";
 export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  
-  // ১. আপনার দেওয়া অনলাইন লিঙ্কটি এখানে ডিফল্ট হিসেবে সেট করা হয়েছে
+  const [password, setPassword] = useState(""); 
+
   const [image, setImage] = useState("https://i.postimg.cc/wTPTDgKs/bunny.jpg");
          
   
@@ -27,8 +26,7 @@ export default function RegisterPage() {
     const { error } = await authClient.signUp.email({ 
       email, 
       password, 
-      name, 
-      // ইউজার লিঙ্ক না দিলে ডিফল্ট এই অনলাইন লিঙ্কটি যাবে
+      name,      
       image: image || "https://i.postimg.cc/wTPTDgKs/bunny.jpg", 
       callbackURL: "/login" 
     });
@@ -48,9 +46,8 @@ export default function RegisterPage() {
 
   return (
     <div className="flex justify-center items-center min-h-[calc(100vh-80px)] bg-indigo-50/30 px-4 py-8">
-      <div className="card w-full max-w-[450px] shadow-xl bg-white p-6 md:p-8 border border-indigo-100 rounded-2xl">
-        
-        {/* আপনার কিউট Bunny লোগো (অনলাইন লিঙ্ক সহ) */}
+      <div className="card w-full max-w-[450px] shadow-xl bg-white p-6 md:p-8 border border-indigo-100 rounded-2xl">       
+  
         <div className="flex flex-col items-center mb-4">
           <div className="avatar mb-2">
             <div className="w-16 rounded-full ring ring-indigo-500 ring-offset-base-100 ring-offset-2">
@@ -76,8 +73,7 @@ export default function RegisterPage() {
             <label className="label py-1"><span className="label-text font-bold text-gray-700 text-xs">Email Address</span></label>
             <input type="email" placeholder="Your Email" className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" required onChange={(e)=>setEmail(e.target.value)} />
           </div>
-
-          {/* Photo URL Field */}
+  
           <div className="form-control w-full">
             <label className="label py-1"><span className="label-text font-bold text-gray-700 text-xs">Photo URL (Link)</span></label>
             <input type="url" placeholder="https://example.com" className="input input-bordered h-10 w-full outline-none focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-indigo-50/20 transition-all" onChange={(e)=>setImage(e.target.value)} />

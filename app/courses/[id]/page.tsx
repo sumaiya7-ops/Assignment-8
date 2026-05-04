@@ -4,7 +4,7 @@ import coursesData from "@/data/courses.json";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 
-export default function CourseDetails({ params }) {
+export default function CourseDetails({ params }: { params: { id: string } }){
   const { data: session, isPending } = authClient.useSession();
   const router = useRouter();
   const { id } = use(params);

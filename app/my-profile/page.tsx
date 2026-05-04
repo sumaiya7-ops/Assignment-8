@@ -5,8 +5,7 @@ import { User, Mail, ShieldCheck, Edit } from "lucide-react";
 
 export default function MyProfile() {
   const { data: session, isPending } = authClient.useSession();
-
-  // লোডিং স্টেট
+  
   if (isPending) {
     return (
       <div className="flex justify-center items-center min-h-[60vh]">
@@ -14,8 +13,6 @@ export default function MyProfile() {
       </div>
     );
   }
-
-  // যদি ইউজার লগইন না থাকে
   if (!session) {
     return (
       <div className="text-center mt-20">
@@ -27,8 +24,7 @@ export default function MyProfile() {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="max-w-2xl mx-auto bg-base-100 shadow-2xl rounded-3xl border border-gray-100 overflow-hidden">
-        {/* Profile Header Background */}
+      <div className="max-w-2xl mx-auto bg-base-100 shadow-2xl rounded-3xl border border-gray-100 overflow-hidden">      
         <div className="h-32 bg-gradient-to-r from-primary to-secondary"></div>
         
         <div className="px-8 pb-8">
