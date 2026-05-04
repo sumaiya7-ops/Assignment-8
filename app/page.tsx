@@ -5,9 +5,9 @@ import coursesData from "@/data/courses.json";
 
 export default function Home() {
   const popularCourses = coursesData.slice(0, 3);
- const trendingCourses = coursesData
-    .sort((a, b) => b.rating - a.rating)
-    .slice(0, 3);
+const trendingCourses = [...coursesData]
+  .sort((a, b) => b.rating - a.rating)
+  .slice(0, 3);
   return (
     <main className="min-h-screen bg-white overflow-hidden">
       
