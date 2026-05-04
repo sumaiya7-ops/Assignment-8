@@ -1,9 +1,8 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ['://unsplash.com', '://flaticon.com', 'i.ibb.co', 'i.postimg.cc'],
+  },
 };
-images: {
-  domains: ['images.unsplash.com', 'cdn-icons-png.flaticon.com'],
-}
+
 export default nextConfig;
