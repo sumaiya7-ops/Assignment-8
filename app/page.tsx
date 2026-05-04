@@ -18,12 +18,12 @@ export default function Home() {
       </div>
 
       {/* 🔥 Popular Courses Section */}
-      <section className="container mx-auto px-4 py-16">
+      <section className="bg-cyan-900 container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+          <h2 className="text-3xl md:text-4xl font-bold text-white">
             Our Popular Courses
           </h2>
-          <div className="w-24 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+          <div className="w-24 h-1 bg-cyan-950 mx-auto mt-4 rounded-full"></div>
         </div>
 
         {/* কোর্সের গ্রিড (৩টি কার্ড দেখাবে) */}
@@ -42,53 +42,86 @@ export default function Home() {
             See All Courses
           </Link>
         </div>
-      </section>
-
-        {/* 💡 Quick Learning Tips Section */}
-<section className="py-20 relative overflow-hidden">
-  {/* ব্যাকগ্রাউন্ড গ্রেডিয়েন্ট এবং ডেকোরেশন */}
-  <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-blue-50 -z-10"></div>
-  <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-32 -mt-32"></div>
+    </section>
+{/* 🚀 SkillSphere Premium: Learning Tips Section */}
+{/* 🚀 SkillSphere Deep Dark: Learning Tips Section */}
+<section className="py-24 bg-teal-950 text-gray-300 overflow-hidden relative">
 
   <div className="container mx-auto px-4">
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
-        Quick Learning Tips <span className="animate-pulse">💡</span>
+    
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-4">
+        Master Your 
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400">
+          {" "}Skills_
+        </span>
       </h2>
-      <p className="text-gray-500 max-w-lg mx-auto">
-        Boost your productivity and master new skills faster with these expert-proven techniques.
-      </p>
+      <div className="w-16 h-1 bg-gradient-to-r from-blue-700 to-cyan-500 mx-auto rounded-full"></div>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      {/* কার্ড ১ */}
-      <div className="group p-8 bg-white/60 backdrop-blur-md rounded-3xl border border-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <div className="w-14 h-14 bg-gradient-to-tr from-primary to-blue-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-primary/20 text-white">
-          <svg xmlns="http://w3.org" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+      
+      {/* Left Image */}
+      <div className="relative group cursor-pointer">
+        <div className="absolute -inset-1 bg-blue-700/10 rounded-[2rem] blur-2xl group-hover:bg-cyan-500/20 transition duration-700"></div>
+        
+        <div className="relative bg-[#030712] rounded-[2rem] p-3 border border-white/10 shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+            alt="Learning"
+            className="rounded-[1.5rem] w-full h-[380px] object-cover grayscale-[20%] group-hover:grayscale-0 transition duration-500 opacity-90"
+          />
         </div>
-        <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-primary transition-colors">Daily Practice</h3>
-        <p className="text-gray-600 leading-relaxed">
-          Consistency is the key to mastering any new skill. Dedicate at least 30 minutes every day to stay ahead of the curve.
-        </p>
       </div>
 
-      {/* কার্ড ২ */}
-      <div className="group p-8 bg-white/60 backdrop-blur-md rounded-3xl border border-white shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <div className="w-14 h-14 bg-gradient-to-tr from-secondary to-purple-400 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-secondary/20 text-white">
-          <svg xmlns="http://w3.org" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-          </svg>
+      {/* Right Content */}
+      <div className="space-y-6">
+        
+        {/* Card 1 */}
+        <div className="group p-8 rounded-2xl bg-[#020617] border border-white/10 hover:border-blue-500/40 hover:bg-[#030a1a] transition-all duration-500">
+          <div className="flex gap-6 items-start">
+            <div className="text-3xl opacity-60 group-hover:opacity-100 transition-opacity">📅</div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                Daily Practice
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Consistency is the key to mastery. Practice daily and build real-world skills step by step.
+              </p>
+            </div>
+          </div>
         </div>
-        <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-secondary transition-colors">Time Management</h3>
-        <p className="text-gray-600 leading-relaxed">
-          Set specific, distraction-free hours for learning. Use techniques like Pomodoro to stay focused and avoid burnout.
-        </p>
+
+        {/* Card 2 */}
+        <div className="group p-8 rounded-2xl bg-[#020617] border border-white/10 hover:border-cyan-500/40 hover:bg-[#030a1a] transition-all duration-500">
+          <div className="flex gap-6 items-start">
+            <div className="text-3xl opacity-60 group-hover:opacity-100 transition-opacity">⏱️</div>
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                Time Management
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Focus on deep work sessions. One hour of focus beats a whole day of distractions.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Button */}
+        <div className="pt-6">
+          <button className="px-8 py-3 bg-gradient-to-r from-blue-700 to-cyan-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 transition">
+            Get Started
+          </button>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+
+
+      
 
     </main>
   );
