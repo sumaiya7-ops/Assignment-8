@@ -1,5 +1,0 @@
-BETTER_AUTH_SECRET=secret
-GOOGLE_CLIENT_ID=yourid
-GOOGLE_CLIENT_SECRET=yoursecret
-MONGODB_URI=yourmongodburi
-NEXT_PUBLIC_APP_URL=http://localhost:3000

@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar bg-indigo-50 shadow-md px-4 md:px-12 sticky top-0 z-50 backdrop-blur-md bg-opacity-90">
+    <div className="navbar bg-blue-100 shadow-md px-4 md:px-12 sticky top-0 z-50 backdrop-blur-md bg-opacity-90">
       
       {/* ১. বাম পাশ: শুধু লোগো এবং মোবাইল মেনু */}
       <div className="navbar-start">

@@ -1,32 +1,42 @@
 "use client";
-import { useState } from 'react';
-import courses from '@/data/courses.json';
-import CourseCard from '@/components/CourseCard';
+import { useState } from "react";
+import coursesData from "@/data/courses.json";
+import CourseCard from "@/components/CourseCard";
 
 export default function AllCourses() {
-  const [search, setSearch] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const filtered = courses.filter(c => 
-    c.title.toLowerCase().includes(search.toLowerCase())
+  // সার্চ লজিক: টাইটেল অনুযায়ী ফিল্টার হবে
+  const filteredCourses = coursesData.filter((course) =>
+    course.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-6">All Courses</h1>
-      
-      {/* Search Bar */}
-      <input 
-        type="text" 
-        placeholder="Search courses by title..." 
-        className="input input-bordered w-full max-w-md mb-8"
-        onChange={(e) => setSearch(e.target.value)}
-      />
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold text-center mb-8">All Courses</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filtered.map(course => (
-          <CourseCard key={course.id} course={course} />
-        ))}
+      {/* 🔍 Search Input (Challenge 1) */}
+      <div className="max-w-md mx-auto mb-12">
+        <input
+          type="text"
+          placeholder="Search courses by title..."
+          className="input input-bordered w-full shadow-md"
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
+
+      {/* কোর্সের গ্রিড */}
+      {filteredCourses.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
+        </div>
+      ) : (
+        <div className="text-center py-20 text-gray-500">
+          <p className="text-xl">No courses found matching your search.</p>
+        </div>
+      )}
     </div>
   );
 }
