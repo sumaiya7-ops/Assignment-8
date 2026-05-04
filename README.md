@@ -6,7 +6,7 @@ It allows users to explore courses, view details, manage profiles, and authentic
 ---
 
 ## 🌐 Live Demo
-👉 https://your-live-link.com
+👉 https://poetic-narwhal-883988.netlify.app/
 
 ---
 
