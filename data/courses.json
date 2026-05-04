@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch.",
+    "image": "https://i.ibb.co.com/0jK6Y1C/web.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI UX Design Masterclass",
+    "instructor": "Sarah Smith",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Master UI UX Design.",
+    "image": "https://i.ibb.co.com/fq0T0nT/design.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Guide",
+    "instructor": "Alex",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "Beginner",
+    "description": "Marketing from zero.",
+    "image": "https://i.ibb.co.com/xh4JfLs/marketing.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "React Advanced",
+    "instructor": "David",
+    "duration": "18 hours",
+    "rating": 4.9,
+    "level": "Advanced",
+    "description": "Advanced React concepts.",
+    "image": "https://i.ibb.co.com/BsF5m7v/react.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 5,
+    "title": "Python for Beginners",
+    "instructor": "Emma",
+    "duration": "14 hours",
+    "rating": 4.6,
+    "level": "Beginner",
+    "description": "Python basics.",
+    "image": "https://i.ibb.co.com/Tqjpk1v/python.jpg",
+    "category": "Programming"
+  },
+  {
+    "id": 6,
+    "title": "Motion Graphics",
+    "instructor": "Michael",
+    "duration": "10 hours",
+    "rating": 4.5,
+    "level": "Intermediate",
+    "description": "Learn animation graphics.",
+    "image": "https://i.ibb.co.com/5cCz6Xg/motion.jpg",
+    "category": "Animation"
+  }
+]
