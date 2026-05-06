@@ -6,7 +6,7 @@ It allows users to explore courses, view details, manage profiles, and authentic
 ---
 
 ## 🌐 Live Demo
-👉 https://your-live-link.com
+👉 https://poetic-narwhal-883988.netlify.app/
 
 ---
 
@@ -24,7 +24,7 @@ It allows users to explore courses, view details, manage profiles, and authentic
 - 🔍 Search & Filter Courses
 - 👤 User Profile Page
 - ✏️ Profile Update Feature
-- 📱 Fully Responsive UI (Mobile + Desktop)
+- 📱 Fully Responsive UI
 - 🎨 Modern UI with Tailwind CSS
 - ⚡ Fast Performance with Next.js App Router
 
@@ -55,30 +55,23 @@ public/ → Images & Assets
 
 Create a `.env.local` file in the root directory:
 
+
 ```bash
 MONGODB_URI=your_mongodb_connection
+BETTER_AUTH_SECRET=your_auth_secret
+BETTER_AUTH_URL=https://poetic-narwhal-883988.netlify.app
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
-AUTH_SECRET=your_auth_secret
-## 🚀 Getting Started
 
-### 1. Clone Repository
-```bash
-git clone https://github.com/your-username/skillsphere.git
+📌 Future Improvements
+1. Video Course System
+2. Payment Gateway Integration
+3. Admin Dashboard
+4. Student Progress Tracking
 
+## 👨‍💻 Author
 
-http://localhost:3000
+Built with ❤️ by Sumaiya 
+Frontend Developer | Next.js Enthusiast
 
----
-
-## 3. ⭐ Optional (but bonus marks / impression)
-এটা add করলে teacher/reviewer বেশি impressed হবে:
-
-```md
-## 📌 Future Improvements
-
-- Video Course System
-- Payment Gateway Integration
-- Admin Dashboard
-- Student Progress Tracking
 
