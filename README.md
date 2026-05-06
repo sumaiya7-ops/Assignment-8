@@ -50,13 +50,12 @@ lib/ → Authentication & Helpers
 public/ → Images & Assets  
 
 ---
-
+ 
 ## 🔐 Environment Variables
 
 Create a `.env.local` file in the root directory:
 
-
-```bash
+```env
 MONGODB_URI=your_mongodb_connection
 BETTER_AUTH_SECRET=your_auth_secret
 BETTER_AUTH_URL=https://poetic-narwhal-883988.netlify.app
