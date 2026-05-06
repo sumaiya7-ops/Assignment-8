@@ -2,7 +2,6 @@ import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { MongoClient } from "mongodb";
 
-// লিঙ্কটি ঠিকমতো পাচ্ছে কি না তা নিশ্চিত করতে
 if (!process.env.MONGODB_URI) {
     throw new Error("MONGODB_URI is not defined in .env.local");
 }
@@ -15,6 +14,12 @@ export const auth = betterAuth({
     emailAndPassword: {
         enabled: true,
     },
+    socialProviders: {
+    google: {
+      clientId: process.env.GOOGLE_CLIENT_ID!,
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+    },
+  },
 });
 
 
