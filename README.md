@@ -58,7 +58,7 @@ Create a `.env.local` file in the root directory:
 ```env
 MONGODB_URI=your_mongodb_connection
 BETTER_AUTH_SECRET=your_auth_secret
-BETTER_AUTH_URL=https://poetic-narwhal-883988.netlify.app
+BETTER_AUTH_URL=example.com
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
 
